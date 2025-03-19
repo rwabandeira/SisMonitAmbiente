@@ -64,13 +64,14 @@ public class PortaSerialSimulada {
     }
 
     private String gerarDadosSimulados() {
-      double temperatura = 25 + random.nextGaussian() * 2;
-      int luminosidade = (int) (random.nextDouble() * 1024);
-      int umidadeAr = 40 + (int) (random.nextGaussian() * 10);
-      int umidadeSolo = 40 + (int) (random.nextGaussian() * 10);
-      return String.format(
-          "Temperatura: %.2f / Luminosidade: %d / Umidade do ar: %d%% / Umidade do solo: %d%%\n",
-          temperatura, luminosidade, umidadeAr, umidadeSolo);
+      double temperatura = 10 + (random.nextDouble() * 32);
+      int luminosidade = 10 + (int) (random.nextDouble() * 20);
+      int umidadeAr = 20 + (int) (random.nextGaussian() * 60);
+      int umidadeSolo = 10 + (int) (random.nextGaussian() * 60);
+      return "Temperatura: " + String.format("%.2f", temperatura) + " ºC / " +
+        "Luminosidade: " + luminosidade + " Lux / " +
+        "Umidade do ar: " + umidadeAr + "% / " +
+        "Umidade do solo: " + umidadeSolo + "%";
     }
   }
 
