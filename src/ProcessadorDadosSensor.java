@@ -59,13 +59,13 @@ public class ProcessadorDadosSensor {
               }
               System.out.println();
 
-              System.out.printf("Umidade do ar: %d %% ", umidadeAr);
+              System.out.printf("Umidade do ar: %d%% ", umidadeAr);
               if (umidadeAr <= vlrUmidArBaixa || umidadeAr >= vlrUmidArAlta) {
                   System.out.print("(ALERTA)");
               }
               System.out.println();
 
-              System.out.printf("Umidade do solo: %d %% ", umidadeSolo);
+              System.out.printf("Umidade do solo: %d%% ", umidadeSolo);
               if (umidadeSolo <= vlrUmidSoloBaixa || umidadeSolo >= vlrUmidSoloAlta) {
                   System.out.print("(ALERTA)");
               }
