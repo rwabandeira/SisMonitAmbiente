@@ -12,13 +12,13 @@ public class ProcessadorDadosSensor {
   private static final String msgTempAlta = "ALERTA: Temperatura elevada (%s °C). Ar-condicionado ligado.";
   private static final String msgTempBaixa = "ALERTA: Temperatura baixa (%s °C). Aquecedor ligado.";
   private static final String msgTempNormal = "Status: Temperatura normal (%s °C). Sistemas desligados.";
-  private static final String msgLumBaixa = "ALERTA: Luminosidade baixa (%d Lux). Luzes ligadas.";
-  private static final String msgLumAlta = "Status: Luminosidade alta (%d Lux). Luzes desligadas.";
+  private static final String msgLumBaixa = "ALERTA: Luminosidade baixa (%d Lux). Luz ligada.";
+  private static final String msgLumAlta = "Status: Luminosidade alta (%d Lux). Luz desligada.";
   private static final String msgUmidArBaixa = "ALERTA: Umidade do ar baixa (%d%%). Umidificador ligado.";
   private static final String msgUmidArAlta = "ALERTA: Umidade do ar alta (%d%%). Desumidificador ligado.";
   private static final String msgUmidArNormal = "Status: Umidade do ar normal (%d%%). Sistemas desligados.";
-  private static final String msgUmidSoloBaixa = "ALERTA: Umidade do solo baixa (%d%%). Irrigacao ligado.";
-  private static final String msgUmidSoloAlta = "ALERTA: Umidade do solo alta (%d%%). Drenagem ligado.";
+  private static final String msgUmidSoloBaixa = "ALERTA: Umidade do solo baixa (%d%%). Irrigação ligada.";
+  private static final String msgUmidSoloAlta = "ALERTA: Umidade do solo alta (%d%%). Drenagem ligada.";
   private static final String msgUmidSoloNormal = "Status: Umidade do solo normal (%d%%). Sistemas desligados.";
 
   public String gerarDadosTeste() {

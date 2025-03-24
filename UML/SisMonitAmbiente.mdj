@@ -1065,7 +1065,7 @@
 							"isLeaf": true,
 							"type": "String",
 							"isReadOnly": true,
-							"defaultValue": "\"ALERTA: Luminosidade baixa (%d Lux). Luzes ligadas.\""
+							"defaultValue": "\"ALERTA: Luminosidade baixa (%d Lux). Luz ligada.\""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1079,7 +1079,7 @@
 							"isLeaf": true,
 							"type": "String",
 							"isReadOnly": true,
-							"defaultValue": "\"Status: Luminosidade alta (%d Lux). Luzes desligadas.\""
+							"defaultValue": "\"Status: Luminosidade alta (%d Lux). Luz desligada.\""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1135,7 +1135,7 @@
 							"isLeaf": true,
 							"type": "String",
 							"isReadOnly": true,
-							"defaultValue": "\"ALERTA: Umidade do solo baixa (%d%%). Irrigacao ligado.\""
+							"defaultValue": "\"ALERTA: Umidade do solo baixa (%d%%). Irrigação ligada.\""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1149,7 +1149,7 @@
 							"isLeaf": true,
 							"type": "String",
 							"isReadOnly": true,
-							"defaultValue": "\"ALERTA: Umidade do solo alta (%d%%). Drenagem ligado.\""
+							"defaultValue": "\"ALERTA: Umidade do solo alta (%d%%). Drenagem ligada.\""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -2866,7 +2866,7 @@
 											"width": 627.63427734375,
 											"height": 13,
 											"underline": true,
-											"text": "-msgLumBaixa: String = \"ALERTA: Luminosidade baixa (%d Lux). Luzes ligadas.\" {readOnly}",
+											"text": "-msgLumBaixa: String = \"ALERTA: Luminosidade baixa (%d Lux). Luz ligada.\" {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2885,7 +2885,7 @@
 											"width": 627.63427734375,
 											"height": 13,
 											"underline": true,
-											"text": "-msgLumAlta: String = \"Status: Luminosidade alta (%d Lux). Luzes desligadas.\" {readOnly}",
+											"text": "-msgLumAlta: String = \"Status: Luminosidade alta (%d Lux). Luz desligada.\" {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2961,7 +2961,7 @@
 											"width": 627.63427734375,
 											"height": 13,
 											"underline": true,
-											"text": "-msgUmidSoloBaixa: String = \"ALERTA: Umidade do solo baixa (%d%%). Irrigacao ligado.\" {readOnly}",
+											"text": "-msgUmidSoloBaixa: String = \"ALERTA: Umidade do solo baixa (%d%%). Irrigação ligada.\" {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2980,7 +2980,7 @@
 											"width": 627.63427734375,
 											"height": 13,
 											"underline": true,
-											"text": "-msgUmidSoloAlta: String = \"ALERTA: Umidade do solo alta (%d%%). Drenagem ligado.\" {readOnly}",
+											"text": "-msgUmidSoloAlta: String = \"ALERTA: Umidade do solo alta (%d%%). Drenagem ligada.\" {readOnly}",
 											"horizontalAlignment": 0
 										},
 										{
