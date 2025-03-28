@@ -1,0 +1,72 @@
+@startuml
+class Principal {
+  + main(args: String[]): void
+}
+
+class ComunicacaoSerial {
+  - portaSerial: SerialPort
+  - portaSerialSimulada: PortaSerialSimulada
+  + ComunicacaoSerial(nomePorta: String)
+  + ComunicacaoSerial(portaSerialSimulada: PortaSerialSimulada)
+  + inicializar(): boolean
+  + lerDados(): String
+  + fechar(): void
+}
+
+class PortaSerialSimulada {
+  - estaAberta: boolean
+  - nomePorta: String
+  - random: Random
+  + PortaSerialSimulada(nomePorta: String)
+  + abrirPorta(): boolean
+  + definirParametrosPorta(taxaBaud: int, bitsDados: int, bitsParada: int, paridade: int): void
+  + obterFluxoEntrada(): InputStream
+  + estaAberta(): boolean
+  + fecharPorta(): boolean
+  - FluxoEntradaSimulado: class
+  - FluxoEntradaSimuladoErro: class
+}
+
+class ProcessadorDadosSensor {
+  - vlrTempBaixa: int
+  - vlrTempAlta: int
+  - vlrLumBaixa: int
+  - vlrUmidArBaixa: int
+  - vlrUmidArAlta: int
+  - vlrUmidSoloBaixa: int
+  - vlrUmidSoloAlta: int
+  - msgTempAlta: String
+  - msgTempBaixa: String
+  - msgTempNormal: String
+  - msgLumBaixa: String
+  - msgLumAlta: String
+  - msgUmidArBaixa: String
+  - msgUmidArAlta: String
+  - msgUmidArNormal: String
+  - msgUmidSoloBaixa: String
+  - msgUmidSoloAlta: String
+  - msgUmidSoloNormal: String
+  + gerarDadosTeste(): String
+  + processarDadosSensor(dados: String): void
+}
+
+class ReceptorDadosSensor {
+  - modoTeste: boolean
+  - comunicacaoSerial: ComunicacaoSerial
+  - processadorDados: ProcessadorDadosSensor
+  - portaSerialSimulada: PortaSerialSimulada
+  + ReceptorDadosSensor(nomePorta: String)
+  + iniciar(): void
+  + fechar(): void
+  - exibirDados(dados: String): void
+}
+
+Principal "1" -- "1" ReceptorDadosSensor
+ReceptorDadosSensor "1" -- "1" ComunicacaoSerial
+ReceptorDadosSensor "1" -- "1" ProcessadorDadosSensor
+ReceptorDadosSensor "0..1" -- "1" PortaSerialSimulada
+ComunicacaoSerial "1" -- "1" PortaSerialSimulada
+ComunicacaoSerial "1" -- "1" SerialPort
+PortaSerialSimulada "1" -- "1" PortaSerialSimulada.FluxoEntradaSimulado
+PortaSerialSimulada "0..1" -- "1" PortaSerialSimulada.FluxoEntradaSimuladoErro
+@enduml
